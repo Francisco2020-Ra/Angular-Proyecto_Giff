@@ -1,2 +1,19 @@
+<div class="row">
+    <div 
+    *ngFor="let gif of resultados"
+    class="col-md-4 col-sm-6">
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum voluptas adipisci inventore magnam voluptatem dolor quaerat sit molestias dicta, saepe totam asperiores aperiam exercitationem illum aliquam, modi commodi odit. Minus!
+        <div class="card">
+            <img [src]="gif.images.downsized_medium.url" 
+            [alt]="gif.title"
+            class="card-img-top">
+            
+            <div class="card-body">
+                <div class="card-text">
+                    {{ gif.title }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
